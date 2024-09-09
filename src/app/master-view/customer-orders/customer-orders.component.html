@@ -1,0 +1,26 @@
+<div class="column-layout group">
+  <igx-list class="list">
+    <igx-list-item *ngFor="let item of northwindCloudCustomer" (click)="listItemClick(item)">
+      <span igxListLineTitle>{{ item.companyName }}</span>
+      <span igxListLineSubTitle>{{ item.contactName }}</span>
+    </igx-list-item>
+  </igx-list>
+</div>
+<div class="column-layout group_1">
+  <igx-grid [data]="northwindCloudCustomerOrdersResult" primaryKey="orderID" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+    <igx-column field="orderID" dataType="number" header="orderID" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="customerID" dataType="string" header="customerID" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="employeeID" dataType="number" header="employeeID" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="orderDate" dataType="date" header="orderDate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="requiredDate" dataType="date" header="requiredDate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="shippedDate" dataType="date" header="shippedDate" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="shipVia" dataType="number" header="shipVia" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="freight" dataType="number" header="freight" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="shipName" dataType="string" header="shipName" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="shipAddress" dataType="string" header="shipAddress" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="shipCity" dataType="string" header="shipCity" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="shipRegion" dataType="string" header="shipRegion" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="shipPostalCode" dataType="string" header="shipPostalCode" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+    <igx-column field="shipCountry" dataType="string" header="shipCountry" [filterable]="true" [sortable]="true" [selectable]="false"></igx-column>
+  </igx-grid>
+</div>
